@@ -18,7 +18,6 @@
         <module>homebox-dubbo-order</module>
         <module>homebox-dubbo-user-api</module>
         <module>homebox-boot-dubbo-user</module>
-        <module>top.hapleow</module>
         <module>homebox-dubbo-order-api</module>
     </modules>
 
