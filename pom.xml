@@ -19,6 +19,8 @@
         <module>homebox-dubbo-user-api</module>
         <module>homebox-boot-dubbo-user</module>
         <module>homebox-dubbo-order-api</module>
+        <module>user-service</module>
+        <module>user-service-api</module>
     </modules>
 
     <properties>
