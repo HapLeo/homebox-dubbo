@@ -17,7 +17,6 @@
         <module>homebox-dubbo-user</module>
         <module>homebox-dubbo-order</module>
         <module>homebox-dubbo-user-api</module>
-        <module>homebox-boot-dubbo-user</module>
         <module>homebox-dubbo-order-api</module>
         <module>user-service</module>
         <module>order-service</module>
