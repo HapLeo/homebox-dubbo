@@ -1,8 +1,0 @@
-server:
-  port: 9010
-spring:
-  application:
-    name: homebox-boot-dubbo-order
-dubbo:
-  registry:
-    address: zookeeper://localhost:2181
