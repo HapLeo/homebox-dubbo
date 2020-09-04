@@ -25,7 +25,7 @@
 
     <dubbo:application name="homebox-dubbo-order"/>
 
-    <dubbo:registry address="zookeeper://${zookeeper.address:127.0.0.1}:2181"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2180,zookeeper://127.0.0.1:2181,zookeeper://127.0.0.1:2182"/>
 
     <dubbo:reference id="userService" check="true" interface="top.hapleow.service.IUserService"/>
 </beans>
