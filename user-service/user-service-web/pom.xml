@@ -8,9 +8,9 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>user-service-app</artifactId>
+    <artifactId>user-service-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>user-service-app</name>
+    <name>user-service-web</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -18,7 +18,10 @@
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
