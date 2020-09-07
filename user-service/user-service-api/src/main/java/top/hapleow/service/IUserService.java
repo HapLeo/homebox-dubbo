@@ -9,4 +9,8 @@ public interface IUserService {
     User getById(Long id);
 
     List<User> list();
+
+    void addItem(User user);
+
+    void editItem(User user);
 }
