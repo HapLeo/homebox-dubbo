@@ -1,10 +1,17 @@
 spring:
   application:
     name: user-service-app
+  datasource:
+    url: jdbc:mysql://localhost:3306/homebox?useUtf8=true&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 dubbo:
   registry:
     address: zookeeper://localhost:2180,zookeeper://localhost:2181,zookeeper://localhost:2182
   scan:
     base-packages: top.hapleow.userserviceapp.service
-
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
