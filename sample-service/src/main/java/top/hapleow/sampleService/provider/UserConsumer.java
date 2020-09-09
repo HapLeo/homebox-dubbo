@@ -18,7 +18,7 @@ public class UserConsumer {
 
         // 注册中心配置
         RegistryConfig registry = new RegistryConfig();
-        registry.setAddress("zookeeper://localhost:2180,zookeeper://localhost:2181,zookeeper://localhost:2182");
+        registry.setAddress("zookeeper://localhost:2180");
 
         // 引用配置
         ReferenceConfig<IUserService> reference = new ReferenceConfig<>();
