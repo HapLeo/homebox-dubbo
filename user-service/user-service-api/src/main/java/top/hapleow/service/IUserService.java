@@ -13,4 +13,6 @@ public interface IUserService {
     void addItem(User user);
 
     void editItem(User user);
+
+    void delete(Long id);
 }

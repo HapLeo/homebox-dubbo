@@ -31,4 +31,9 @@ public class UserServiceImpl implements IUserService {
     public void editItem(User user) {
 
     }
+
+    @Override
+    public void delete(Long id) {
+
+    }
 }
