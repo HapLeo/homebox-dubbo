@@ -31,18 +31,6 @@ class UserServiceImplTest {
     @Test
     void addItem() {
 
-        String uuid = UUID.randomUUID().toString();
-        int int4 = new Random(10000).nextInt();
-        int int6 = new Random(1000000).nextInt();
-
-        User user = new User();
-        user.setUserNickName(uuid.substring(0, 6));
-        user.setUserName(uuid.substring(0, 6));
-        user.setUserPassword(uuid);
-        user.setUserPasswordSalt(String.valueOf(int6));
-        user.setUserSeqId(UUID.randomUUID().toString());
-        user.setUserTelephone("1802182" + int4);
-        userService.addItem(user);
     }
 
     @Test
