@@ -9,6 +9,7 @@ import top.hapleow.userserviceapp.dao.UserMapper;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Service
 public class UserServiceImpl implements IUserService {
@@ -52,9 +53,11 @@ public class UserServiceImpl implements IUserService {
      */
     private User generateRandomUser() {
 
+        ThreadLocalRandom current = ThreadLocalRandom.current();
+
         String uuid = UUID.randomUUID().toString();
-        int int4 = (int) (Math.random() * 10000) + 1000;
-        int int6 = (int) (Math.random() * 1000000) + 10000;
+        int int4 = (int) (current.nextDouble() * 10000) + 1000;
+        int int6 = (int) (current.nextDouble() * 1000000) + 100000;
 
         User user = new User();
         user.setUserNickName(uuid.substring(0, 6));
@@ -63,6 +66,7 @@ public class UserServiceImpl implements IUserService {
         user.setUserPasswordSalt(String.valueOf(int6));
         user.setUserSeqId(UUID.randomUUID().toString());
         user.setUserTelephone("1802182" + int4);
+        System.out.println(user);
         return user;
     }
 }
