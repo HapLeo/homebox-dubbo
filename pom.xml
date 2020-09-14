@@ -14,10 +14,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>homebox-dubbo-user</module>
-        <module>homebox-dubbo-order</module>
-        <module>homebox-dubbo-user-api</module>
-        <module>homebox-dubbo-order-api</module>
         <module>user-service</module>
         <module>order-service</module>
         <module>common</module>
@@ -29,14 +25,8 @@
         <maven.compiler.target>11</maven.compiler.target>
         <dubbo.version>2.7.3</dubbo.version>
     </properties>
-
-    <!-- 所有module都依赖  -->
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
-        </dependency>
+    <dependencyManagement>
+        <dependencies>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -47,6 +37,15 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.20</version>
+        </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <!-- 所有module都依赖  -->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
         </dependency>
 
         <dependency>
@@ -93,5 +92,6 @@
             </exclusions>
         </dependency>
     </dependencies>
+
 
 </project>

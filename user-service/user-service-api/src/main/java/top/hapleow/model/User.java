@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 public class User implements Serializable {
 
-    private long userId;
+    private Long userId;
     private String userNickName;
     private String userName;
     private String userSeqId;

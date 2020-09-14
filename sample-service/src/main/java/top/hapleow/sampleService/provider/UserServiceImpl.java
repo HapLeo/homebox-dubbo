@@ -24,7 +24,7 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public void addItem(User user) {
-
+        System.out.println("sample add method is empty....");
     }
 
     @Override
