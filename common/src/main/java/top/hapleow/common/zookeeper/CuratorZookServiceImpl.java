@@ -28,6 +28,11 @@ public class CuratorZookServiceImpl implements IZookService {
         // 创建客户端
         CuratorFramework client = CuratorFrameworkFactory.newClient(zkAddress, retry);
         client.start();
+
+        // 添加状态监听器
+        client.getConnectionStateListenable().addListener((client1, newState) -> {
+            System.out.println("stateListenable: " + newState);
+        });
         return client;
     }
 

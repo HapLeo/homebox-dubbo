@@ -31,6 +31,7 @@ public class CuratorZookAsyncServiceImpl implements IZookService {
         // 创建客户端
         CuratorFramework client = CuratorFrameworkFactory.newClient(zkAddress, retry);
         client.start();
+
         client.getCuratorListenable().addListener(new CuratorListener() {
             @Override
             public void eventReceived(CuratorFramework client, CuratorEvent event) throws Exception {
