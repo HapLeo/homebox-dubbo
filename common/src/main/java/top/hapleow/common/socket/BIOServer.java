@@ -30,10 +30,10 @@ public class BIOServer {
                         while ((msg = reader.readLine()) != null) {
                             System.out.println(client + ":" + msg);
                             if (Objects.equals(msg, "exit")) {
+                                System.out.println("当前socket关闭...");
                                 break;
                             }
                         }
-                        System.out.println("当前socket关闭...");
                     } catch (IOException e) {
                         e.printStackTrace();
                     } finally {
