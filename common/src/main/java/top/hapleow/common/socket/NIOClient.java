@@ -24,7 +24,7 @@ public class NIOClient {
                     }
                 });
 
-        Channel channel = bootstrap.connect("localhost", 8000).channel();
+        Channel channel = bootstrap.connect("localhost", 9000).channel();
 
         while (true){
            channel.writeAndFlush(new Date() + ": hello,world!");
