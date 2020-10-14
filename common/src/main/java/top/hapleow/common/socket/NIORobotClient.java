@@ -8,9 +8,8 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.util.Scanner;
 
 public class NIORobotClient {
 
@@ -38,8 +37,8 @@ public class NIORobotClient {
 
                                 ByteBuf byteBuf = (ByteBuf) msg;
                                 System.out.println(byteBuf.toString(Charset.forName("utf-8")));
-                                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                                String message = bufferedReader.readLine();
+                                Scanner scanner = new Scanner(System.in);
+                                String message = scanner.nextLine();
                                 ByteBuf buffer = ctx.channel().alloc().buffer();
                                 byte[] bytes = message.getBytes(Charset.forName("utf-8"));
                                 buffer.writeBytes(bytes);
