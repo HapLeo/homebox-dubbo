@@ -1,10 +1,18 @@
 package top.hapleow.model;
 
-public class Order {
+import lombok.Data;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+@Data
+public class Order implements Serializable {
 
     private Long orderId;
-
     private String orderNo;
-
-    private String userId;
+    private Long orderUserId;
+    private String orderUserNickName;
+    private Double orderProductSumPrice;
+    private LocalDateTime orderCreateTime;
+    private LocalDateTime orderUpdateTime;
 }

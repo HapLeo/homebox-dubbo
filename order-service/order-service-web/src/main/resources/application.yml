@@ -1,0 +1,9 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: order-service-web
+dubbo:
+  registry:
+    address: nacos://localhost:8848
+
