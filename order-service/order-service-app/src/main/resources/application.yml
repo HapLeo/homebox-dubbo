@@ -1,6 +1,6 @@
 spring:
   application:
-    name: user-service-app
+    name: order-service-app
   datasource:
     url: jdbc:mysql://localhost:3306/homebox?useUtf8=true&serverTimezone=GMT%2B8
     username: root
@@ -10,7 +10,9 @@ dubbo:
   registry:
     address: nacos://127.0.0.1:8848
   scan:
-    base-packages: top.hapleow.userserviceapp.service
+    base-packages: top.hapleow.orderserviceapp.service
+  protocol:
+    port: 9001
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

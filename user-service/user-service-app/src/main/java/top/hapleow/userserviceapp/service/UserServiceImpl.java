@@ -7,7 +7,6 @@ import top.hapleow.service.IUserService;
 import top.hapleow.userserviceapp.dao.UserMapper;
 
 import java.util.List;
-import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 

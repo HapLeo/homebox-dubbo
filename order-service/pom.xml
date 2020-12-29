@@ -13,7 +13,25 @@
     <packaging>pom</packaging>
     <modules>
         <module>order-service-api</module>
+        <module>order-service-app</module>
+        <module>order-service-web</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>top.hapleow</groupId>
+            <artifactId>order-service-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>
